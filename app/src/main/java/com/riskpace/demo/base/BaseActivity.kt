@@ -10,18 +10,10 @@ abstract class BaseActivity(@LayoutRes val contentLayoutId: Int) :
 
     private lateinit var mBaseContext: AppCompatActivity
     private var mToast: Toast? = null
-   // private var mProgressDialog: KProgressHUD? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         mBaseContext = this
-
-//        mProgressDialog = KProgressHUD.create(this)
-//            .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
-//            .setCancellable(false)
-//            .setAnimationSpeed(2)
-//            .setDimAmount(0.0f)
     }
 
     fun makeToast(message: String?) {
@@ -33,18 +25,4 @@ abstract class BaseActivity(@LayoutRes val contentLayoutId: Int) :
             mToast?.show()
         }
     }
-
-//    fun showLoading() {
-//        mProgressDialog?.let {
-//            if (it.isShowing.not())
-//                it.show()
-//        }
-//    }
-//
-//    fun hideLoading() {
-//        mProgressDialog?.let {
-//            if (it.isShowing)
-//                it.dismiss()
-//        }
-//    }
 }
