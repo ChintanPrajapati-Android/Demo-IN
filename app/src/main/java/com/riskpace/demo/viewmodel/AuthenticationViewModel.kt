@@ -51,8 +51,8 @@ class AuthenticationViewModel : BaseViewModel() {
                 item == null -> isLogin?.invoke(USER_NOT_EXIST)
                 item.userPassword.equals(password).not() -> isLogin?.invoke(PASSWORD_WRONG)
                 else -> {
-                    getPreference().getString(PreferenceManager.USER_NAME, userName)
-                    getPreference().getString(PreferenceManager.PASSWORD, password)
+                    getPreference().putString(PreferenceManager.USER_NAME, userName)
+                    getPreference().putString(PreferenceManager.PASSWORD, password)
                     isLogin?.invoke(SUCCESS)
                 }
             }

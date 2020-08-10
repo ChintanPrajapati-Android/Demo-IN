@@ -57,4 +57,12 @@ dependencies {
     //region Stetho
     implementation 'com.facebook.stetho:stetho:1.5.1'
     //endregion
+
+    //region Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.7.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.2'
+    implementation 'com.squareup.okhttp3:okhttp:4.2.2'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:4.2.2'
+    //endregion
 }

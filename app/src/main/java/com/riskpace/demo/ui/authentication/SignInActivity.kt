@@ -9,6 +9,7 @@ import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import com.riskpace.demo.R
 import com.riskpace.demo.base.BaseActivity
+import com.riskpace.demo.ui.dashboard.DashboardActivity
 import com.riskpace.demo.viewmodel.AuthenticationViewModel
 import kotlinx.android.synthetic.main.activity_sign_in.*
 
@@ -40,7 +41,8 @@ class SignInActivity : BaseActivity(R.layout.activity_sign_in), TextWatcher {
             btnSignIn.isEnabled = true
             when (state) {
                 AuthenticationViewModel.SUCCESS -> {
-
+                    startActivity(Intent(this, DashboardActivity::class.java))
+                    finish()
                 }
                 AuthenticationViewModel.USER_NOT_EXIST -> {
                     makeToast(getString(R.string.user_not_exist))
