@@ -1,4 +1,4 @@
-package com.uffizio.minitrakzee.data.roomdatabase.userdata
+package com.riskpace.demo.data.roomdatabase.userdata
 
 import androidx.room.Dao
 import androidx.room.Insert

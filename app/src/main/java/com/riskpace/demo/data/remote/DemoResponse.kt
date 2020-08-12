@@ -19,16 +19,10 @@ class Asthma(
 )
 
 data class Diabete(
-    @SerializedName("labs")
-    val labs: List<Lab>,
     @SerializedName("medications")
     val medications: List<Medication>
 )
 
-data class Lab(
-    @SerializedName("missing_field")
-    val missingField: String
-)
 
 data class Medication(
     @SerializedName("medicationsClasses")
@@ -51,39 +45,22 @@ data class ClassName(
 
 data class ClassName2(
     @SerializedName("associatedDrug")
-    val associatedDrug: List<AssociatedDrugX>,
+    val associatedDrug: List<AssociatedDrug>,
     @SerializedName("associatedDrug#2")
-    val associatedDrug2: List<AssociatedDrug2X>
+    val associatedDrug2: List<AssociatedDrug2>
 )
 
 data class AssociatedDrug(
     @SerializedName("dose")
-    val dose: String,
+    val dose: String ="",
     @SerializedName("name")
-    val name: String,
+    val name: String ="",
     @SerializedName("strength")
-    val strength: String
+    val strength: String = "",
+    var problems: String = ""
 )
 
 data class AssociatedDrug2(
-    @SerializedName("dose")
-    val dose: String,
-    @SerializedName("name")
-    val name: String,
-    @SerializedName("strength")
-    val strength: String
-)
-
-data class AssociatedDrugX(
-    @SerializedName("dose")
-    val dose: String,
-    @SerializedName("name")
-    val name: String,
-    @SerializedName("strength")
-    val strength: String
-)
-
-data class AssociatedDrug2X(
     @SerializedName("dose")
     val dose: String,
     @SerializedName("name")

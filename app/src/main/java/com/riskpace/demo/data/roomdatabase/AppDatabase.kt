@@ -4,7 +4,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.riskpace.demo.base.BaseApplication
-import com.uffizio.minitrakzee.data.roomdatabase.userdata.UserDataDao
+import com.riskpace.demo.data.roomdatabase.userdata.UserDataDao
 import com.riskpace.demo.data.roomdatabase.userdata.UserDataItem
 
 @Database(
