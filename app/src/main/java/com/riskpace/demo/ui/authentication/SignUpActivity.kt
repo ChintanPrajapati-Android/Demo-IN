@@ -28,17 +28,17 @@ class SignUpActivity : BaseActivity(R.layout.activity_sign_up), TextWatcher {
         viewModel = ViewModelProvider(this).get(AuthenticationViewModel::class.java)
 
         btnSignUp.setOnClickListener {
-            pbSignUp.visibility = View.VISIBLE
-            btnSignUp.isEnabled = false
             Handler().postDelayed({
-                if (edtUserName.text.toString().contains(" ").not())
+                if (edtUserName.text.toString().contains(" ").not()) {
+                    pbSignUp.visibility = View.VISIBLE
+                    btnSignUp.isEnabled = false
                     viewModel.insertUserDetailInLocalDatabase(
                         edtUserName.text.toString(),
                         edtFirstName.text.toString(),
                         edtLastName.text.toString(),
                         edtPassword.text.toString()
                     )
-                else
+                } else
                     makeToast(getString(R.string.no_space_allow_in_user_name))
             }, 2000)
         }
